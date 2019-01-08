@@ -980,8 +980,8 @@ EOF
     {
         'url' => "https://download.qt.io/archive/qt/5.5/5.5.1/single/qt-everywhere-opensource-src-5.5.1.tar.xz",
         'pre-conf'
-        => "sed -i.bak -e 's/xcrun -find xcrun/xcrun -find xcodebuild/' qtbase/configure; "
-           "sed -i.bak -e 's/xcrun -find xcrun/xcrun -find xcodebuild/' qtbase/mkspecs/features/mac/default_pre.prf; "
+        => "sed -i.bak -e 's/xcrun -find xcrun/xcrun -find xcodebuild/' qtbase/configure; " .
+           "sed -i.bak -e 's/xcrun -find xcrun/xcrun -find xcodebuild/' qtbase/mkspecs/features/mac/default_pre.prf; " .
            "cd qtbase/src/plugins/sqldrivers/mysql; cp mysql.pro mysql2.pro ; " .
             "echo \"target.path=$PREFIX/qtplugins-$QTVERSION\" >> mysql2.pro; " .
             "echo \"INSTALL += target\" >> mysql2.pro",
