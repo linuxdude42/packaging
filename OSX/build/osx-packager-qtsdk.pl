@@ -60,7 +60,7 @@ our @targetsBE = ( 'MythBackend',  'MythFillDatabase', 'MythTV-Setup');
 # Name of the PlugIns directory in the application bundle
 our $BundlePlugins = "PlugIns";
 our $OSTARGET = "10.9";
-our $PYVER = "2.6";
+our $PYVER = "2.7";
 our $PYTHON = "python$PYVER";
 
 # Patches for MythTV source
@@ -1093,7 +1093,8 @@ EOF
 
     'exiv2' =>
     {
-        'url' => "http://www.exiv2.org/exiv2-0.25.tar.gz",
+        'url' => "http://exiv2.org/releases/exiv2-0.25.tar.gz",
+        # exiv2 0.26 switches to cmake
     },
 
     'python-mysql' =>
