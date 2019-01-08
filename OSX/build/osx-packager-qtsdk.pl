@@ -91,6 +91,10 @@ our %build_profile = (
         'taglib',
         'exiv2',
         'libsamplerate',
+        'fontconfig',  # for libbluray
+        'libxml2',     # for libbluray
+        'apache-ant',  # for libbluray
+        'libbluray',
         'python-mysql',
         'python-lxml',
         'python-pycurl',
@@ -1101,6 +1105,23 @@ EOF
     'libsamplerate' =>
     {
         'url' => "http://www.mega-nerd.com/SRC/libsamplerate-0.1.9.tar.gz",
+    },
+
+    'libxml2' =>
+    {
+        'url'      => "ftp://xmlsoft.org/libxml2/libxml2-2.9.9.tar.gz",
+        'pre-conf' => "mkdir -p $PREFIX/lib/$PYTHON/site-packages",
+        'conf'     => [ "--with-python_install_dir=$PREFIX/lib/$PYTHON/site-packages", ]
+    },
+
+    'fontconfig' =>
+    {
+        'url' => "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.1.tar.bz2",
+    },
+
+    'libbluray' =>
+    {
+        'url' => "https://download.videolan.org/pub/videolan/libbluray/1.0.2/libbluray-1.0.2.tar.bz2",
     },
 
     'python-mysql' =>
