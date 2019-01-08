@@ -90,6 +90,7 @@ our %build_profile = (
         'automake',
         'taglib',
         'exiv2',
+        'libsamplerate',
         'python-mysql',
         'python-lxml',
         'python-pycurl',
@@ -1095,6 +1096,11 @@ EOF
     {
         'url' => "http://exiv2.org/releases/exiv2-0.25.tar.gz",
         # exiv2 0.26 switches to cmake
+    },
+
+    'libsamplerate' =>
+    {
+        'url' => "http://www.mega-nerd.com/SRC/libsamplerate-0.1.9.tar.gz",
     },
 
     'python-mysql' =>
