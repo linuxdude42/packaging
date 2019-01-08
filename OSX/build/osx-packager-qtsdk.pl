@@ -849,7 +849,7 @@ our %depend = (
 
     'freetype' =>
     {
-        'url' => "$sourceforge/sourceforge/freetype/freetype-2.4.8.tar.gz",
+        'url' => "$sourceforge/sourceforge/freetype/freetype-2.8.1.tar.gz",
     },
 
     'lame' =>
